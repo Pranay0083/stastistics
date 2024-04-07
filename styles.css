@@ -1,0 +1,61 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+}
+
+/* Container for the tables */
+#userStatsContainer {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align content horizontally */
+    gap: 20px; /* Gap between the tables */
+}
+
+/* Style for each table */
+table {
+    width: 50%; /* Each table takes 50% of the container width */
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for a card-like effect */
+}
+
+/* Caption style */
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+/* Table header (th) style */
+th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table cell (td) style */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* Stack tables vertically on smaller screens */
+    #userStatsContainer {
+        flex-direction: column;
+        align-items: center; /* Center-align tables vertically */
+    }
+    table {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Add space between stacked tables */
+    }
+}
