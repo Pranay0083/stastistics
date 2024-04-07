@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const username = 'pranay0083'; // Replace 'codeforces_handle' with the actual username
-
+let username = "";
+function main() { // Replace 'codeforces_handle' with the actual username
     const userInfoUrl = `https://codeforces.com/api/user.info?handles=${username}`;
+    console.log(username);
 
     // Fetch user information and update the user details table
     fetch(userInfoUrl)
@@ -109,4 +109,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.error('API Request Failed:', error);
             });
     }
-});
+}
+
+function getUsername(){
+    
+    console.log(document.querySelector('#username').value);
+    username = document.querySelector('#username').value;
+    document.querySelector('.giveName').innerHTML = "";
+    document.querySelector('.giveName').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+    main();
+}
